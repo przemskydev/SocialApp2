@@ -7,8 +7,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <PublicRoute />
-        <PrivateRoute />
+        <>
+          <PublicRoute />
+          <PrivateRoute />
+        </>
       </Switch>
     </Router>
   );
