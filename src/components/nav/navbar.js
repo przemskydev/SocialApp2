@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import logo from '../../assets/logo.svg';
+import Button from '../button/button';
 
 const NavBar = () => (
   <>
@@ -16,9 +17,11 @@ const NavBar = () => (
       </Navbar.Brand>
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          Signed in as: <a href="#login">Mark Otto</a>
+          <h4>
+            Signed in as: <a href="#login">Mark Otto</a>
+          </h4>
         </Navbar.Text>
-        <Button variant="dark">Dark</Button>
+        <Button down>Logout</Button>
       </Navbar.Collapse>
     </Navbar>
   </>
