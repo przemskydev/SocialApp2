@@ -5,8 +5,6 @@ import MainView from './views/Main.view';
 import Login from './views/Login.view';
 import Register from './views/Register.view';
 
-import './App.css';
-
 function App() {
   return (
     <Router>
