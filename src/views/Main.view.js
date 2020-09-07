@@ -1,12 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-
-class MainView extends React.Component {
-
-  render() {
-    return <h1>Hello there!</h1>;
-  }
-}
-
+const MainView = () => <h1>Hello there! Config done!</h1>;
 
 export default MainView;
