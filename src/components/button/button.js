@@ -8,8 +8,8 @@ const Button = styled.button`
   color: red;
   text-decoration: none;
   padding: 0;
-  width: 80px;
-  height: 40px;
+  width: 70px;
+  height: 30px;
   padding-top: 3px;
   border: 1px solid red;
   border-bottom: 3px solid red;
@@ -32,7 +32,7 @@ const Button = styled.button`
       ::after {
         content: '';
         position: absolute;
-        width: 80px;
+        width: 85px;
         height: 40px;
         background-color: red;
         z-index: -1;
@@ -44,6 +44,21 @@ const Button = styled.button`
 
       :hover::after {
         transform: translatey(-100%);
+      }
+    `}
+
+  ${({ share }) =>
+    share &&
+    css`
+      color: darkgray;
+      border: none;
+      border-bottom: 3px solid lightgray;
+      width: 70px;
+      height: 25px;
+
+      :hover {
+        color: darkgray;
+        font-size: 1.1rem;
       }
     `}
 `;
