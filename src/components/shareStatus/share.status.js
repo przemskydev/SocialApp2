@@ -4,13 +4,15 @@ import StyledInput from '../input/input';
 
 const ShareStatus = () => (
   <>
-    <Card style={{ width: '60rem' }}>
+    <Card style={{ width: '85vw' }}>
       <Card.Body>
         <Card.Title>
           <Row>
             <Col xs={1}>M</Col>
-            <Col xs={9}>Mark Otto</Col>
-            <Col xs={2}>Profile?</Col>
+            <Col>Mark Otto</Col>
+            <Col xs={3} md={2} lg={1}>
+              Profile?
+            </Col>
           </Row>
         </Card.Title>
         <Card.Body>
