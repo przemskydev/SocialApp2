@@ -10,8 +10,16 @@ const Input = styled.input`
   font-size: 1.5rem;
 
   :focus + label {
-    top: 100%;
-    margin-top: -16px;
+    top: -18%;
+    left: 10px;
+    font-size: 1rem;
+    width: 10%;
+    background-color: white;
+    opacity: 1;
+  }
+
+  :focus::placeholder {
+    opacity: 0;
   }
 `;
 
@@ -21,16 +29,19 @@ const StyledWrapper = styled.div`
 
 const StyledLabel = styled.label`
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  transition: 0.2s;
+  top: 12%;
+  left: 4px;
+  padding: 0 5px;
+  width: 13%;
+  font-size: 1.5rem;
+  background-color: white;
+  transition: opacity 0.1s ease-in-out, top 0.1s ease-in-out, left 0.1s ease-in-out,
+    font-size 0.1s ease-in-out, width 0.1s ease-in-out;
 `;
 
 const StyledInput = ({ placeholder }) => (
   <StyledWrapper>
-    <Input id="name" name="name" type="text" placeholder={placeholder} />
+    <Input id="name" name="name" type="text" /* placeholder={placeholder} */ />
     <StyledLabel htmlFor="name">{placeholder}</StyledLabel>
   </StyledWrapper>
 );
