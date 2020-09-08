@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import StyledInput from '../input/input';
+import { StyledAvatar } from '../../template/Main.template';
 
 const ShareStatus = () => (
   <>
@@ -8,7 +9,9 @@ const ShareStatus = () => (
       <Card.Body>
         <Card.Title>
           <Row>
-            <Col xs={1}>M</Col>
+            <Col xs={1}>
+              <StyledAvatar>M</StyledAvatar>
+            </Col>
             <Col>Mark Otto</Col>
             <Col xs={3} md={2} lg={1}>
               Profile?
