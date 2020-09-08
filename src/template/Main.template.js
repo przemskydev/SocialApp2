@@ -23,3 +23,8 @@ export const StyledAvatar = styled.span`
   background-color: lightgrey;
   border-radius: 50%50%;
 `;
+
+export const StyledText = styled.div`
+  padding: 16px 16px 26px 16px;
+  font-size: 1.4rem;
+`;
