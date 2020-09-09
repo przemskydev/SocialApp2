@@ -9,6 +9,10 @@ const Input = styled.input`
   height: 3rem;
   font-size: 1.5rem;
 
+  /* ::placeholder {
+    padding: 0 7px;
+  } */
+
   :focus + label {
     transform: translateY(-16px) scale(0.6);
   }
@@ -36,13 +40,14 @@ const StyledLabel = styled.label`
   }
 `;
 
-const StyledInput = ({ placeholder }) => (
-  <StyledWrapper>
-    <Input id="name" name="name" type="text" />
-    <StyledLabel htmlFor="name">
-      <span>{placeholder}</span>
-    </StyledLabel>
-  </StyledWrapper>
-);
-
+const StyledInput = ({ id, label }) => {
+  return (
+    <StyledWrapper>
+      <Input id={id} name="name" type="text" /* placeholder={placeholder} */ />
+      <StyledLabel htmlFor="name">
+        <span>{label}</span>
+      </StyledLabel>
+    </StyledWrapper>
+  );
+};
 export default StyledInput;
