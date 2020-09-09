@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import StyledInput from '../input/input';
 import Button from '../button/button';
 import { StyledAvatar } from '../../template/Main.template';
 
 const ShareStatus = () => {
+  const inputRef = useRef();
   return (
     <>
       <Card style={{ width: '85vw' }}>
@@ -21,7 +22,7 @@ const ShareStatus = () => {
             </Row>
           </Card.Title>
           <Card.Body>
-            <StyledInput id="name" label="Say hello" />
+            <StyledInput ref={inputRef} id="name" label="Say hello" placeholder="Add new status" />
           </Card.Body>
           <div className="d-flex justify-content-between">
             <Button share>FILE</Button>

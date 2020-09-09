@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { Accordion, Card, Row, Col } from 'react-bootstrap';
 import { StyledWrapper, StyledAvatar, StyledText } from '../../template/Main.template';
 // import Button from '../button/button'
@@ -8,6 +8,8 @@ import heart from '../../assets/heart.svg';
 import comment from '../../assets/comment.svg';
 
 const Post = () => {
+  const inputRef = createRef();
+
   return (
     <StyledWrapper>
       <Card style={{ width: '70vw' }}>
@@ -39,7 +41,12 @@ const Post = () => {
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="1">
                 <Card.Body>
-                  <StyledInput id="post" label="Add comment" />
+                  <StyledInput
+                    ref={inputRef}
+                    id="post"
+                    label="Add comment"
+                    placeholder="Stop hate!"
+                  />
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
