@@ -9,12 +9,17 @@ const Input = styled.input`
   height: 3rem;
   font-size: 1.5rem;
 
+  ::placeholder {
+    padding-left: 7px;
+    opacity: 0;
+  }
+
   :focus + label {
     transform: translateY(-16px) scale(0.6);
   }
 
   :focus::placeholder {
-    opacity: 0;
+    opacity: 0.5;
   }
 `;
 
@@ -36,13 +41,14 @@ const StyledLabel = styled.label`
   }
 `;
 
-const StyledInput = ({ placeholder }) => (
-  <StyledWrapper>
-    <Input id="name" name="name" type="text" />
-    <StyledLabel htmlFor="name">
-      <span>{placeholder}</span>
-    </StyledLabel>
-  </StyledWrapper>
-);
-
-export default StyledInput;
+const StyledInput = ({ id, label, placeholder }, ref) => {
+  return (
+    <StyledWrapper>
+      <Input ref={ref} id={id} name={id} type="text" placeholder={placeholder} />
+      <StyledLabel htmlFor={id}>
+        <span>{label}</span>
+      </StyledLabel>
+    </StyledWrapper>
+  );
+};
+export default React.forwardRef(StyledInput);

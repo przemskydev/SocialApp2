@@ -6,9 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // ***
+  // Error with react-bootstrap Transition
+  // https://github.com/react-bootstrap/react-bootstrap/issues/5075#issuecomment-629230889
+  // ***
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>,
   document.getElementById('root'),
 );
 

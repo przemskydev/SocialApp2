@@ -1,12 +1,13 @@
 import React from 'react';
 import ShareStatus from '../components/shareStatus/share.status';
 import { StyledWrapper } from '../template/Main.template';
+import Post from '../components/post/Post';
 
 const MainView = () => {
   return (
     <StyledWrapper>
-      <h1>Hello there!</h1>
       <ShareStatus />
+      <Post />
     </StyledWrapper>
   );
 };

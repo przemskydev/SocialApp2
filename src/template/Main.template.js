@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,4 +22,9 @@ export const StyledAvatar = styled.span`
   justify-content: center;
   background-color: lightgrey;
   border-radius: 50%50%;
+`;
+
+export const StyledText = styled.div`
+  padding: 16px 16px 26px 16px;
+  font-size: 1.4rem;
 `;

@@ -51,6 +51,7 @@ const Button = styled.button`
     share &&
     css`
       color: darkgray;
+      margin: 10px 0 0 0;
       border: none;
       border-bottom: 3px solid lightgray;
       width: 70px;
