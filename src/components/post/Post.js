@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Accordion, Card, Row, Col } from 'react-bootstrap';
 import { StyledWrapper, StyledAvatar, StyledText } from '../../template/Main.template';
 // import Button from '../button/button'
 import ButtonIco from '../buttonIco/button.ico';
@@ -15,8 +15,8 @@ const Post = () => (
             <StyledAvatar>M</StyledAvatar>
           </Col>
           <Col className="d-flex flex-column justify-content-center">
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+            <Card.Title>Mark Otto</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">Post date</Card.Subtitle>
           </Col>
         </Row>
 
@@ -29,6 +29,17 @@ const Post = () => (
 
         <ButtonIco ico={heart} />
         <ButtonIco ico={comment} />
+
+        <Accordion defaultActiveKey="0">
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey="1">
+              Click me!
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>Hello! I the body</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
       </Card.Body>
     </Card>
   </StyledWrapper>

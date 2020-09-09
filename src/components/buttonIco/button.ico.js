@@ -23,7 +23,7 @@ const StyledButtonIco = styled.button`
     top: 49%;
     left: 49%;
     opacity: 0;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   :active:after {
